@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- ?xml-stylesheet type="text/xsl" href="http://ilcsoft.desy.de/marlin/marlin.xsl"? -->
+<!-- ?xml-stylesheet type="text/xsl" href="marlin.xsl"? -->
+
+<!-- Loading shared library : /gpfs/home/ilc/yu/sample_code/checkEcm/lib/libcheckecm.so.0.1.0 (libcheckecm.so)-->
+
+<!--##########################################
+    #                                        #
+    #     Example steering file for marlin   #
+    #                                        #
+    ##########################################-->
+
+
+<marlin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ilcsoft.desy.de/marlin/marlin.xsd">
+  <constants>
+    <!-- define constants here - use in steering file as ${ConstantName} --> 
+    <!--constant name="DetectorModel" value="ILD_l5_o1_v02" /-->
+  </constants>
+
+  <execute>
+    <processor name="MyEcmCheckProcessor"/>  
+  </execute>
+
+  <global>
+    <parameter name="LCIOInputFiles">
+      data_idr_500/higgs_ffh/ILD_l5_o1_v02/v02-00-01/rv02-00-01.sv02-00-01.mILD_l5_o1_v02.E500-TDR_ws.I108239.Pqqh_zz_4n.eL.pR.n001.d_dstm_10263_0.slcio 
+      data_idr_500/higgs_ffh/ILD_l5_o1_v02/v02-00-01/rv02-00-01.sv02-00-01.mILD_l5_o1_v02.E500-TDR_ws.I108239.Pqqh_zz_4n.eL.pR.n001.d_dstm_10263_1.slcio 
+    </parameter>
+    <!-- limit the number of processed records (run+evt): -->  
+    <parameter name="MaxRecordNumber" value="-1" />  
+    <parameter name="SkipNEvents" value="0" />  
+    <parameter name="SupressCheck" value="false" />  
+    <parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT"> MESSAGE0 </parameter> 
+    <!-- optionally limit the collections that are read from the input file: -->  
+    <!--parameter name="LCIOReadCollectionNames">MCParticle PandoraPFOs</parameter-->
+  </global>
+
+  <processor name="MyEcmCheckProcessor" type="EcmCheckProcessor">
+    <!--EcmCheckProcessor does whatever it does ...-->
+    <!--Center of mass energy-->
+    <parameter name="CenterOfMassEnergy" type="double">500 </parameter>
+    <!--Name of the MCParticle collection-->
+    <parameter name="InputMCParticlesCollection" type="string" lcioInType="MCParticle">MCParticle </parameter>
+    <!--Interval of 'Hello, Analysis!'-->
+    <parameter name="NHelloAnalysis" type="int">1000 </parameter>
+    <!--Name of output root file-->
+    <parameter name="OutputRootFile" type="string">output.root </parameter>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <!--parameter name="Verbosity" type="string">DEBUG </parameter-->
+  </processor>
+
+</marlin>

@@ -1,0 +1,73 @@
+<!-- Loading shared library : /gpfs/home/ilc/yu/sample_code/checkEcm/lib/libcheckecm.so.0.1.0 (libcheckecm.so)-->
+
+
+Hello, Analysis! No: 1000
+
+Hello, Analysis! No: 2000
+
+Hello, Analysis! No: 3000
+
+Hello, Analysis! No: 4000
+
+Hello, Analysis! No: 5000
+
+Hello, Analysis! No: 6000
+
+Hello, Analysis! No: 7000
+
+Hello, Analysis! No: 8000
+
+Hello, Analysis! No: 9000
+
+Hello, Analysis! No: 10000
+
+Hello, Analysis! No: 11000
+
+Hello, Analysis! No: 12000
+
+Hello, Analysis! No: 13000
+
+Hello, Analysis! No: 14000
+
+Hello, Analysis! No: 15000
+
+Hello, Analysis! No: 16000
+
+Hello, Analysis! No: 17000
+
+Hello, Analysis! No: 18000
+
+Hello, Analysis! No: 19000
+
+Hello, Analysis! No: 20000
+EcmCheckProcessor::end()  MyEcmCheckProcessor processed 20000 events in 100 runs 
+  =============
+   Cut Summary 
+  =============
+   ll+4 Jet    
+  =============
+
+  -----------------------------------------------------------
+   ID   No.Events    Cut Description                         
+  -----------------------------------------------------------
+    0       20000  : No Cuts
+  -----------------------------------------------------------
+[ MESSAGE "Marlin"]  ---- no GEAR XML file given  --------- 
+[ MESSAGE "MyEcmCheckProcessor"] 
+[ MESSAGE "MyEcmCheckProcessor"] ---- MyEcmCheckProcessor -  parameters: 
+[ MESSAGE "MyEcmCheckProcessor"] 	CenterOfMassEnergy:  500
+[ MESSAGE "MyEcmCheckProcessor"] 	InputMCParticlesCollection:  MCParticle
+[ MESSAGE "MyEcmCheckProcessor"] 	NHelloAnalysis:  1000
+[ MESSAGE "MyEcmCheckProcessor"] 	OutputRootFile:  output.root
+[ MESSAGE "MyEcmCheckProcessor"] -------------------------------------------------
+[ MESSAGE "Marlin"]  --------------------------------------------------------- 
+[ MESSAGE "Marlin"]   Events skipped by processors : 
+[ MESSAGE "Marlin"]   Total: 0
+[ MESSAGE "Marlin"]  --------------------------------------------------------- 
+[ MESSAGE "Marlin"] 
+[ MESSAGE "Marlin"]  --------------------------------------------------------- 
+[ MESSAGE "Marlin"]       Time used by processors ( in processEvent() ) :      
+[ MESSAGE "Marlin"] 
+[ MESSAGE "Marlin"] MyEcmCheckProcessor                  1.160000e+00 s in        20000 events  ==> 5.800000e-05 [ s/evt.] 
+[ MESSAGE "Marlin"]             Total:                   1.160000e+00 s in        20000 events  ==> 5.800000e-05 [ s/evt.] 
+[ MESSAGE "Marlin"]  --------------------------------------------------------- 
